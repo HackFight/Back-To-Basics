@@ -1,6 +1,6 @@
 #version 330 compatibility
 
-#include /lib/roundVertex.glsl
+#include "/lib/roundVertex.glsl"
 
 //CONSTANTS
 const float VERTEX_POS_IMPRECISION = 0.1;

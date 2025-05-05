@@ -1,6 +1,6 @@
 #version 330 compatibility
 
-#include /lib/roundVertex.glsl
+#include "/lib/roundVertex.glsl"
 
 uniform float viewWidth;
 uniform float viewHeight;
