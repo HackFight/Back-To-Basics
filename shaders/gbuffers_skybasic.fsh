@@ -31,10 +31,14 @@ vec3 screenToView(vec3 screenPos) {
 /* RENDERTARGETS: 0 */
 layout(location = 0) out vec4 color;
 
-void main() {
-	if (renderStage == MC_RENDER_STAGE_STARS) {
+void main()
+{
+	if (renderStage == MC_RENDER_STAGE_STARS)
+	{
 		color = glcolor;
-	} else {
+	}
+	else
+	{
 		vec3 pos = screenToView(vec3(gl_FragCoord.xy / vec2(viewWidth, viewHeight), 1.0));
 		color = vec4(calcSkyColor(normalize(pos)), 1.0);
 	}
