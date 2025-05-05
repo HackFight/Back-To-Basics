@@ -1,5 +1,6 @@
 #version 330 compatibility
 
+//Out
 out vec4 glcolor;
 
 void main() {

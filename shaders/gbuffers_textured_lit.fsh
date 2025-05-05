@@ -1,8 +1,11 @@
 #version 330 compatibility
 
+//Uniforms
 uniform sampler2D lightmap;
 uniform sampler2D gtexture;
+uniform float alphaTestRef = 0.1;
 
+//In
 in vec2 lmcoord;
 in vec2 texCoord;
 in vec4 glcolor;
@@ -21,5 +24,5 @@ void main() {
 
 	color = texture(gtexture, texCoord / clipW) * glcolor;
 	color *= texture(lightmap, lmcoord);
-	if (color.a < 0.1) discard;
+	if (color.a < alphaTestRef) discard;
 }

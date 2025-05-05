@@ -1,5 +1,6 @@
 #version 330 compatibility
 
+//Out
 out vec2 texCoord;
 
 void main()

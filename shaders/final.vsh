@@ -1,8 +1,10 @@
 #version 330 compatibility
 
+//Uniforms
 uniform float viewWidth;
 uniform float viewHeight;
 
+//Out
 out vec2 texelCoord;
 
 void main()

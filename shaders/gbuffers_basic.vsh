@@ -2,9 +2,11 @@
 
 #include "/lib/roundVertex.glsl"
 
+//Uniforms
 uniform float viewWidth;
 uniform float viewHeight;
 
+//Out
 out vec2 lmcoord;
 out vec4 glcolor;
 

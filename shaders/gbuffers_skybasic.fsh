@@ -1,5 +1,6 @@
 #version 330 compatibility
 
+//Uniforms
 uniform int renderStage;
 uniform float viewHeight;
 uniform float viewWidth;
@@ -8,8 +9,10 @@ uniform mat4 gbufferProjectionInverse;
 uniform vec3 fogColor;
 uniform vec3 skyColor;
 
+//In
 in vec4 glcolor;
 
+//Functions
 float fogify(float x, float w) {
 	return w / (x * x + w);
 }

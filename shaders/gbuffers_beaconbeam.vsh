@@ -1,7 +1,9 @@
 #version 330 compatibility
 
+//Uniforms
 uniform mat4 gbufferModelViewInverse;
 
+//Out
 out vec2 texcoord;
 out vec4 glcolor;
 out vec3 normal;

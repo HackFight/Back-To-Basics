@@ -1,7 +1,10 @@
 #version 330 compatibility
 
+//Uniforms
 uniform sampler2D gtexture;
+uniform float alphaTestRef = 0.1;
 
+//In
 in vec2 texcoord;
 in vec4 glcolor;
 in vec3 normal;
@@ -17,5 +20,5 @@ void main() {
 	encodedNormal = vec4(normal * 0.5 + 0.5, 1.0);
 
 	color = texture(gtexture, texcoord) * glcolor;
-	if (color.a < 0.1) discard;
+	if (color.a < alphaTestRef) discard;
 }

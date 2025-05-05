@@ -1,15 +1,13 @@
 #version 330 compatibility
 
 //CONSTANTS
-int DITHER_PATTERN[16] = int[]
+const int DITHER_PATTERN[16] = int[]
 (
     -4, 0, -3, 1,
     2, -2, 3, -1,
     -3, 1, -4, 0,
     3, -1, 2, -2
 );
-
-const float spread = 32.0;
 
 //Uniform
 uniform sampler2D colortex0;
