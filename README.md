@@ -11,3 +11,5 @@ BTB is a shader that emulates the looks of 3D PS1 games.
 - Dithering
 
 **Version:** 1.0.0
+
+Check it on [Modrinth](https://modrinth.com/shader/btb-back-to-basics)
