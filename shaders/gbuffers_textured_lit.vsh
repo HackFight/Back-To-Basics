@@ -18,8 +18,10 @@ void main() {
 	vec4 clipVertex = roundToNearestPixel(ftransform(), viewWidth, viewHeight);
 
 	gl_Position = clipVertex;
+#ifdef vertexSnapping
 	if (gl_Position.z > 0)
         gl_Position /= gl_Position.w;
+#endif
 
 	texCoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
 	lmcoord = (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy;
