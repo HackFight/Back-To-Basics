@@ -1,5 +1,7 @@
 #version 330 compatibility
 
+#define resolution 0.2 // [0.1 0.125 0.2 0.25 0.5 1.0]
+
 uniform int renderStage;
 uniform float viewHeight;
 uniform float viewWidth;
@@ -29,6 +31,8 @@ vec3 screenToView(vec3 screenPos) {
 layout(location = 0) out vec4 color;
 
 void main() {
+	if (gl_FragCoord.y/viewHeight > resolution || gl_FragCoord.x/viewWidth > resolution) discard;
+
 	if (renderStage == MC_RENDER_STAGE_STARS) {
 		color = glcolor;
 	} else {

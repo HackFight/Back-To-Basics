@@ -10,7 +10,8 @@ BTB is a shader that emulates the looks of 3D PS1 games.
 - 16bit color overall
 - Dithering
 - Configs
+- Distant Horizons Support
 
-**Version:** 1.1.0
+**Version:** 2.0.0
 
 Check it on [Modrinth](https://modrinth.com/shader/btb-back-to-basics)
