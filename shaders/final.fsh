@@ -13,7 +13,7 @@ const int DITHER_PATTERN[16] = int[]
 );
 
 //Uniform
-uniform sampler2D colortex0;
+uniform sampler2D gtexture;
 
 //In
 in vec2 texelCoord;
@@ -23,8 +23,7 @@ layout(location = 0) out vec4 color;
 
 void main()
 {
-	color = texelFetch(colortex0, ivec2(texelCoord), 0);
-    color.rgb = pow(color.rgb, vec3(1.0/2.2));
+	color = texelFetch(gtexture, ivec2(texelCoord), 0);
 
     int index = int(int(mod(texelCoord, 4).x) + int(mod(texelCoord, 4).y) * 4);
 

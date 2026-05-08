@@ -2,17 +2,14 @@
 
 #include "/lib/roundVertex.glsl"
 
-out vec2 lmcoord;
 out vec2 texcoord;
 out vec4 glcolor;
 
 void main() {
 	gl_Position = roundToNearestPixel(ftransform());
-
 	if (gl_Position.z > 0)
         gl_Position /= gl_Position.w;
 		
 	texcoord = (gl_TextureMatrix[0] * gl_MultiTexCoord0).xy;
-	lmcoord = (gl_TextureMatrix[1] * gl_MultiTexCoord1).xy;
 	glcolor = gl_Color;
 }
